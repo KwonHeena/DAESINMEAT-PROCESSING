@@ -1,0 +1,106 @@
+<footer>
+	<div class="footer-info">
+		<div class="container">
+			<div class="row top">
+				<div class="col-sm-9 info">
+					<ul>
+						<li>(주)대신육가공 DAESINMEAT PROCESSING CORP.</li>
+						<li>대표자명 : 이철구 대표</li>
+						<li>사업자등록번호 : 410-81-59177</li>
+						<div class="clearfix"></div>
+						<li>주소 : 전남 나주시 왕곡면 혁신산단4길 5 (주)대신육가공</li>
+						<li>Tel : 061-930-9918</li>
+						<li>Fax : 061-930-9916</li>
+						<li>E-mail : daesin4@naver.com</li>
+						<div class="clearfix"></div>
+					</ul>
+				</div>
+				<div class="col-sm-3 icon">
+					<a href="#"><img src="/public/img/footer_icon1.png" class="img-responsive center-block" alt=""><span>축산물이력제</span></a>
+					<a href="#"><img src="/public/img/footer_icon2.png" class="img-responsive center-block" alt=""><span>축산물가격정보</span></a>
+				</div>
+			</div>
+			<div class="row bottom">
+				<div class="col-sm-12">
+					<ul>
+						<li class="copy">©DAESINMEAT PROCESSING CORP. ALL RIGHTS RESERVED.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1608606279962",
+		"key" : "23k6z",
+		"mapWidth" : "100%",
+		"mapHeight" : "400"
+	}).render();
+</script>
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1608538779280",
+		"key" : "23jtp",
+		"mapWidth" : "100%",
+		"mapHeight" : "350"
+	}).render();
+</script>
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1608538949048",
+		"key" : "23jtu",
+		"mapWidth" : "100%",
+		"mapHeight" : "350"
+	}).render();
+</script>
+
+<script>
+$(document).ready(function() {
+	//게시판・주문폼
+	if ($(location).attr('href').indexOf('board') != -1 || $(location).attr('href').indexOf('form') != -1) {
+		$('.board_wrapper, .search_wrap, .pagination_wrap').appendTo('.board-area').css('visibility', 'visible');
+	}
+	$('.member_wrapper').addClass('container');
+
+	$('#company_status .modal').on('shown.bs.modal', function() {
+
+		// 모달이 열릴 때마다 지도가 추가되는 것을 방지
+		var exist_map = $(this).find('.root_daum_roughmap .wrap_map');
+		if(exist_map !== 0) $(this).find('.root_daum_roughmap .wrap_map').remove();
+		// id 값 가져옴
+		var map_id = $(this).find('.root_daum_roughmap').attr('id');
+		if(map_id.indexOf('1606113797465') != '-1') {
+			new daum.roughmap.Lander({
+				"timestamp" : "1606113797465",
+				"key" : "233qd",
+				"mapWidth" : "100%",
+				"mapHeight" : "450"
+			}).render();
+		} else if(map_id.indexOf('1608532069394') != '-1') {
+			new daum.roughmap.Lander({
+				"timestamp" : "1608532069394",
+				"key" : "23jp4",
+				"mapWidth" : "100%",
+				"mapHeight" : "450"
+			}).render();
+		} else if(map_id.indexOf('1608532762755') != '-1') {
+			new daum.roughmap.Lander({
+				"timestamp" : "1608532762755",
+				"key" : "23jpk",
+				"mapWidth" : "100%",
+				"mapHeight" : "450"
+			}).render();
+		} else if(map_id.indexOf('1608532872306') != '-1') {
+			new daum.roughmap.Lander({
+				"timestamp" : "1608532872306",
+				"key" : "23jpn",
+				"mapWidth" : "100%",
+				"mapHeight" : "450"
+			}).render();
+		}
+	});
+});
+</script>
